@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://liquidrekto.github.io/tohomc-project/",
+  "homepage": "https://liquidrekto.github.io/tohomc-webpage/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
