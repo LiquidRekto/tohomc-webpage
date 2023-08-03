@@ -6,13 +6,12 @@ export default defineConfig({
   title: "TOHOMC Project",
   description: "A site contains everything about TOHOMC Project",
   themeConfig: {
-    logo: '/assets/tohomc_logo.png',
+    logo: 'https://i.ibb.co/KXt9vVp/tohomc-logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'About', link: '/about' },
-      { text: 'Docs', link: '/guide/tohomc-build-suite/initial-setup' },
-      { text: 'Design Specification', link: '/markdown-examples' }
+      { text: 'About', link: '/' },
+      { text: 'Docs', link: '/about' },
+      { text: 'Specifications', link: '/guide/tohomc-build-suite/initial-setup' },
     ],
 
     sidebar: {
@@ -26,6 +25,10 @@ export default defineConfig({
         }
       ]
     },
+
+    actionButtons: [
+      { text: 'Go to repo', color: 'red', link: 'https://github.com/LiquidRekto/tohomc-build-suite'}
+    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/LiquidRekto/tohomc-build-suite' }

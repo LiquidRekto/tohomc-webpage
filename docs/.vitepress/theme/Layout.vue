@@ -5,11 +5,11 @@ import Error404 from './pages/Error404.vue'
 import Page from './pages/Page.vue';
 import NavBar from './components/NavBar.vue';
 
-const { site, page, frontmatter } = useData()
+const { site, page, theme } = useData()
 </script>
 
 <template>
-    <NavBar title="TOHOMC Project" logo="https://i.ibb.co/KXt9vVp/tohomc-logo.png"/>
+    <NavBar v-if="theme.nav" :title="site.title" :logo="theme.logo"/>
         <div v-if="page.isNotFound">
             <Error404 />
         </div>

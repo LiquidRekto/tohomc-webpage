@@ -1,8 +1,17 @@
 <script setup>
-    const props = defineProps(['title'])
+    let props = defineProps({
+        color: String,
+        link: String
+    });
+
+    const redirect = () => {
+        if (props.link) {
+            window.location.href = props.link;
+        }
+    };
 </script>
 <template>
-    <button class="">
-
+    <button @click="redirect" :class="'th-button-'+props.color">
+        <slot></slot>
     </button>
 </template>
