@@ -9,8 +9,8 @@ export default defineConfig({
     logo: 'https://i.ibb.co/KXt9vVp/tohomc-logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'About', link: 'about' },
-      { text: 'Docs', link: 'documentation/introduction' },
+      { text: 'About', link: '/about' },
+      { text: 'Docs', link: '/documentation/introduction' },
       { text: 'Specifications', link: '#' },
     ],
 
@@ -19,8 +19,8 @@ export default defineConfig({
         {
           text: 'Introduction',
           items: [
-            { text: 'Markdown Examples', link: 'toho' },
-            { text: 'Runtime API Examples', link: 'api-examples' }
+            { text: 'Markdown Examples', link: '/toho' },
+            { text: 'Runtime API Examples', link: '/api-examples' }
           ]
         }
       ]
