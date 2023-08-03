@@ -9,7 +9,7 @@ const { site, page, frontmatter } = useData()
 </script>
 
 <template>
-    <NavBar title="" logo=""/>
+    <NavBar title="TOHOMC Project" logo="assets/tohomc_logo.png"/>
         <div v-if="page.isNotFound">
             <Error404 />
         </div>
