@@ -17,7 +17,7 @@ const toggleShow = () => {
 }
 </script>
 <template>
-    <nav class="text-gray-700 bg-white dark:bg-gray-700 dark:text-white shadow-md shadow-red-900/40 dark:shadow-red-500/40">
+    <nav class="sticky top-0 z-10 text-gray-700 bg-white dark:bg-gray-700 dark:text-white shadow-md shadow-red-900/40 dark:shadow-red-500/40">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between">
                 <div class="flex space-x-4">
