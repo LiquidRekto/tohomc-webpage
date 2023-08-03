@@ -55,8 +55,13 @@ const toggleShow = () => {
             </div>
 
             <!-- mobile menu -->
-            <div v-for="item in theme.nav" v-if="show" class="md:hidden">
-                <a @click="toggleShow" :href="item.link" class="block py-5 px-3 text-md hover:bg-gray-400 dark:hover:bg-gray-800">{{item.text}}</a>
+            <div v-if="show" class="md:hidden">
+                <div v-for="item in theme.nav">
+                    <a @click="toggleShow" :href="item.link" class="block py-5 px-3 text-md hover:bg-gray-400 dark:hover:bg-gray-800">{{item.text}}</a>
+                </div>
+                <div v-for="item in theme.actionButtons" v-if="theme.actionButtons">
+                    <THButton class="my-4" :link="item.link" :color="item.color">{{ item.text }}</THButton>
+                </div>
             </div>
 
         </div>
