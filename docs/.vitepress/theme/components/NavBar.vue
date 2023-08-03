@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { useData } from 'vitepress';
 import THButton from './THButton.vue';
+import url from '../util';
 
 const { theme, site } = useData();
 
@@ -31,13 +32,13 @@ const toggleShow = () => {
                     </div>
                     <!-- primary nav -->
                     <div v-for="item in theme.nav" class="hidden md:flex items-center space-x-1">
-                        <a :href="item.link.startsWith('/') ? site.base + item.link : item.link" class="py-4 px-3">{{ item.text }}</a>
+                        <a :href="url(site.base, item.link)" class="py-4 px-3">{{ item.text }}</a>
                     </div>
                 </div>
 
                 <!-- secondary nav -->
                 <div v-for="item in theme.actionButtons" v-if="theme.actionButtons" class="hidden md:flex items-center space-x-1">
-                    <THButton :link="item.link.startsWith('/') ? site.base + item.link : item.link" :color="item.color">{{ item.text }}</THButton>
+                    <THButton :link="url(site.base, item.link)" :color="item.color">{{ item.text }}</THButton>
                 </div>
 
                 <!-- mobile menu -->
@@ -60,7 +61,7 @@ const toggleShow = () => {
                     <a @click="toggleShow" :href="item.link" class="block py-5 px-3 text-md hover:bg-gray-400 dark:hover:bg-gray-800">{{item.text}}</a>
                 </div>
                 <div v-for="item in theme.actionButtons" v-if="theme.actionButtons">
-                    <THButton class="my-4" :link="item.link.startsWith('/') ? site.base + item.link : item.link" :color="item.color">{{ item.text }}</THButton>
+                    <THButton class="my-4" :link="url(site.base, item.link)" :color="item.color">{{ item.text }}</THButton>
                 </div>
             </div>
 
