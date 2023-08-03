@@ -6,7 +6,7 @@
                     <!-- logo -->
                     <div>
                         <a href="#" class="flex items-center py-4 px-2">
-                            <img class="h-10 w-10 mr-2" v-bind:src="'../../../' + props.logo" />
+                            <img class="h-10 w-10 mr-2" v-bind:src="props.logo" />
                             <span class="font-bold text-2xl">{{ props.title }}</span>
                         </a>
 
